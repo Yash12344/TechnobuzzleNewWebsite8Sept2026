@@ -15,6 +15,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        // Narrow phones (320px) can't fit the wordmark, a CTA and the menu
+        // button at once; this is where the compact nav CTA starts.
+        xs: '360px',
+      },
       colors: {
         blue: {
           DEFAULT: '#1155F5',

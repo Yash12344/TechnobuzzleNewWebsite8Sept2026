@@ -78,3 +78,24 @@ export function PaperPlane({ className, delay = 0, width = 2.6 }: MarkProps) {
     </Doodle>
   );
 }
+
+/**
+ * One continuous line drawn straight across the process row, with arrowheads
+ * where it passes between steps — so the sequence reads as a single gesture
+ * rather than three separate connectors.
+ */
+export function ProcessTrail({ className, delay = 0, width = 2.8 }: MarkProps) {
+  return (
+    <Doodle viewBox="0 0 1000 60" className={className} preserveAspectRatio="none">
+      <DrawnPath
+        d="M25 34C88 12 142 50 205 32C285 12 345 48 425 30C505 12 575 46 652 30C702 20 742 36 772 30"
+        width={width}
+        delay={delay}
+        duration={1.9}
+      />
+      <DrawnPath d="M126 22L144 32L126 42" width={width} delay={delay + 0.55} duration={0.25} />
+      <DrawnPath d="M376 20L394 30L376 40" width={width} delay={delay + 1.05} duration={0.25} />
+      <DrawnPath d="M626 20L644 30L626 40" width={width} delay={delay + 1.5} duration={0.25} />
+    </Doodle>
+  );
+}

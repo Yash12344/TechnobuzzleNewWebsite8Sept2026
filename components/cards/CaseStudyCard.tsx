@@ -9,18 +9,28 @@ import { ArrowButton } from '@/components/ui/Button';
  * Featured-work card: full-bleed artwork with the client details resting on a
  * dark scrim. Hovering zooms the artwork, lifts the card and swings the arrow.
  */
-export function CaseStudyCard({ project, priority = false }: { project: Project; priority?: boolean }) {
+export function CaseStudyCard({
+  project,
+  priority = false,
+  /** Aspect utilities. Featured work varies these per project so the set reads
+   *  as selected pieces rather than four identical cells. */
+  aspectClassName = 'aspect-[4/3]',
+}: {
+  project: Project;
+  priority?: boolean;
+  aspectClassName?: string;
+}) {
   return (
     <Link
       href={`#work`}
       aria-label={`${project.client} — ${project.description}`}
-      className="group relative block aspect-[4/3] w-full overflow-hidden rounded-card bg-blue-100 shadow-card ring-1 ring-ink/5 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-lift"
+      className={`group relative block w-full overflow-hidden rounded-card bg-blue-100 shadow-card ring-1 ring-ink/5 transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-lift ${aspectClassName}`}
     >
       <Image
         src={project.image}
         alt={project.imageAlt}
         fill
-        sizes="(min-width: 1280px) 20vw, (min-width: 768px) 40vw, 72vw"
+        sizes="(min-width: 1280px) 26vw, (min-width: 768px) 44vw, 72vw"
         priority={priority}
         className="object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.07]"
       />

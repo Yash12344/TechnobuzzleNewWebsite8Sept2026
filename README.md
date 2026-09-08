@@ -69,6 +69,30 @@ Four type roles, wired through CSS variables in `app/layout.tsx`:
 
 No purple, pink, orange, gold or green appears anywhere in the system.
 
+## Composition
+
+The page is built as an editorial spread rather than a stack of centred
+components — roughly structured with a deliberate margin of irregularity:
+
+- The hero's two columns overlap: the figure's column pulls left under the
+  headline and the blue blob overruns its own column on both sides.
+- Display type varies scale, angle and line break within a single headline;
+  "Brands" and "Bigger" are set far larger than their neighbours.
+- Marks are placed to do work, not to decorate — arrows hand off from a
+  heading to the content it introduces, the process is a single drawn trail
+  that starts and stops on its step rings, and the growth figure is circled.
+- Elements cross their own boundaries: the testimonials label sits over the
+  band's top edge, and a blue shape bleeds off the left margin.
+
+Two utilities exist for the display type: `BrushBox` (a painted block behind a
+highlighted word — filled and uneven, because a CSS rounded rectangle reads as
+a button at display sizes) and `MarkerUnderline` (a tapered brush swipe that
+wipes in from the left).
+
+One layout trap worth knowing: an inline SVG is a replaced element, so `left` +
+`right` do **not** bound it — it falls back to its viewBox ratio and can blow
+past the container. Any absolutely positioned doodle needs an explicit width.
+
 ## Editing content
 
 All homepage copy lives in `lib/content.ts` — navigation, services, projects,
@@ -103,14 +127,20 @@ Not a shrunken desktop — each breakpoint is composed:
 
 | Section | Mobile | Tablet | Desktop |
 | --- | --- | --- | --- |
-| Hero | headline first, figure below | stacked, full-width figure | two columns |
-| Services | vertical cards | 2 columns | 4 columns + margin note |
-| Featured work | swipeable snap rail | 2 columns | 4 columns |
-| Impact | 2×2 metric grid | 4 across | 4 across + scribbled note |
-| Process | vertical timeline, drawn down-arrows | horizontal | horizontal |
-| Testimonials | stacked quotes | 2 columns | 3 columns + label |
+| Hero | headline first, figure below | stacked, full-width figure | overlapping spread |
+| Services | vertical cards | 2 columns | 4 staggered, angled cards |
+| Featured work | swipeable snap rail | 2 columns, uniform 4:3 | varied widths and proportions |
+| Impact | 2×2 metric grid | 4 across | 4 across, stepped baselines |
+| Process | vertical timeline, drawn down-arrows | horizontal | horizontal, one drawn trail |
+| Testimonials | stacked quotes | 2 columns | 3 hung quotes + label |
 
-Verified with no horizontal overflow at 360, 390, 834 and 1440 px.
+The asymmetry is desktop-only by design: offsets, rotations and varied aspect
+ratios are gated behind `xl`, so tablet and mobile fall back to clean uniform
+grids. A custom `xs` (360px) breakpoint governs where the compact nav CTA
+appears — below it the wordmark keeps the space instead.
+
+Verified with no horizontal overflow at 320, 360, 390, 430, 640, 768, 834,
+1024, 1180, 1280, 1440, 1600 and 1920 px.
 
 ## Motion & accessibility
 

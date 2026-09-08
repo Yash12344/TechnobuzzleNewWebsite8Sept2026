@@ -83,7 +83,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           {/* Two renderings so the phone gets a CTA that still leaves room for
               the logo and the menu button. */}
-          <Button href="#contact" variant="primary" size="sm" className="px-3.5 sm:hidden">
+          <Button href="#contact" variant="primary" size="sm" className="hidden px-3.5 xs:inline-flex sm:hidden">
             Let&apos;s Talk
           </Button>
           <Button href="#contact" variant="primary" size="md" withArrow className="hidden sm:inline-flex">

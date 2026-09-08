@@ -241,3 +241,48 @@ export function Confetti({ className, delay = 0, width = 3 }: MarkProps) {
     </Doodle>
   );
 }
+
+/** Irregular ring — drawn around step icons so they read as sketched, not iconed. */
+export function HandRing({ className, delay = 0, width = 2.6 }: MarkProps) {
+  return (
+    <Doodle viewBox="0 0 80 80" className={className}>
+      <DrawnPath
+        d="M42 5C61 4 76 21 75 41C74 60 58 76 39 75C20 74 5 58 5 39C5 20 21 6 42 5"
+        width={width}
+        delay={delay}
+        duration={1.1}
+      />
+    </Doodle>
+  );
+}
+
+/**
+ * Rough painted block that sits behind a highlighted word.
+ *
+ * Filled rather than stroked, with deliberately uneven edges — at display
+ * sizes a CSS rounded rectangle reads as a button, this reads as a brush.
+ */
+export function BrushBox({ className, delay = 0 }: { className?: string; delay?: number }) {
+  const reduceMotion = useReducedMotion();
+
+  return (
+    <motion.svg
+      viewBox="0 0 400 120"
+      preserveAspectRatio="none"
+      fill="none"
+      className={className}
+      aria-hidden="true"
+      focusable="false"
+      initial={reduceMotion ? undefined : { scaleX: 0, opacity: 0 }}
+      whileInView={reduceMotion ? undefined : { scaleX: 1, opacity: 1 }}
+      viewport={{ once: true, margin: '-10% 0px' }}
+      transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
+      style={{ originX: 0 }}
+    >
+      <path
+        d="M9 22C88 9 206 3 332 9C374 11 393 15 396 28C399 49 395 83 390 101C387 113 369 118 329 116C207 110 94 115 25 111C10 110 3 102 4 85C5 62 2 36 9 22Z"
+        fill="currentColor"
+      />
+    </motion.svg>
+  );
+}

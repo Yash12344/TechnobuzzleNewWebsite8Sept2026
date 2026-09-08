@@ -116,12 +116,15 @@
     display: inline-block;
     isolation: isolate;
     padding-inline: 0.18em;
+    /* Marker fonts overshoot a tight line box; give the swipe room to cover
+       the full glyph height rather than clipping through the letters. */
+    line-height: 1.06;
   }
 
   .highlight-blue::before {
     content: '';
     position: absolute;
-    inset: 0.1em -0.05em 0.02em;
+    inset: 0.02em -0.06em 0.04em;
     z-index: -1;
     background: theme('colors.blue.DEFAULT');
     /* Uneven corners so the swipe reads as a brush stroke, not a rectangle. */
