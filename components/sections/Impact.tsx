@@ -3,15 +3,15 @@
 import { metrics } from '@/lib/content';
 import { CountUp } from '@/components/ui/CountUp';
 import { Reveal } from '@/components/ui/Reveal';
-import { GrowthChart, ScribbleCircle, Sparkle, Star, Ticks } from '@/components/doodles/Marks';
+import { GrowthChart, RisingTrend, ScribbleCircle, Sparkle, Star, Ticks } from '@/components/doodles/Marks';
 
-/** Nothing shares a baseline — the numbers step up and down like figures
- *  jotted across a page, and each leans a fraction off vertical. */
+/** The figures step upward left to right, so the stagger reinforces the rising
+ *  trend drawn beneath them; each leans a fraction off vertical. */
 const numberPose = [
-  { offset: 'md:mt-3', tilt: '-rotate-[1.5deg]' },
-  { offset: 'md:mt-0', tilt: 'rotate-[1deg]' },
-  { offset: 'md:mt-5', tilt: '-rotate-[0.8deg]' },
-  { offset: 'md:mt-1', tilt: 'rotate-[1.6deg]' },
+  { offset: 'md:mt-9', tilt: '-rotate-[1.5deg]' },
+  { offset: 'md:mt-6', tilt: 'rotate-[1deg]' },
+  { offset: 'md:mt-3', tilt: '-rotate-[0.8deg]' },
+  { offset: 'md:mt-0', tilt: 'rotate-[1.6deg]' },
 ];
 
 export function Impact() {
@@ -33,6 +33,7 @@ export function Impact() {
             </Reveal>
 
             {/* -------- Metrics -------- */}
+            <div className="relative">
             <ul className="grid grid-cols-2 gap-y-8 md:grid-cols-4 md:items-start">
               {metrics.map((metric, i) => (
                 <Reveal
@@ -42,14 +43,14 @@ export function Impact() {
                   y={20}
                   className={`relative px-2 text-center md:px-3 ${numberPose[i].offset}`}
                 >
-                  {/* Hand-drawn separators instead of hairlines. Shown between
-                      every column on md+, and between the pairs on mobile. */}
+                  {/* On mobile the 2x2 grid still needs a divider; from md up
+                      the rising trend below carries the connection instead. */}
                   {i > 0 ? (
                     <svg
                       viewBox="0 0 6 64"
                       fill="none"
                       aria-hidden="true"
-                      className={`doodle -left-1 top-1 h-16 w-1.5 text-blue/40 md:block ${
+                      className={`doodle -left-1 top-1 h-16 w-1.5 text-blue/40 md:hidden ${
                         i % 2 === 1 ? 'block' : 'hidden'
                       }`}
                     >
@@ -87,6 +88,14 @@ export function Impact() {
                 </Reveal>
               ))}
             </ul>
+
+              {/* One growth gesture, touching down on each figure. */}
+              <RisingTrend
+                className="mt-4 hidden h-[4.5rem] w-full text-blue md:block"
+                delay={0.35}
+                width={3.4}
+              />
+            </div>
 
             {/* -------- Handwritten statement -------- */}
             <Reveal y={16} delay={0.2} className="relative mx-auto w-full max-w-[16rem] lg:mx-0">

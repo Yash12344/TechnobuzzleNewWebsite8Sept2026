@@ -20,15 +20,15 @@ export function Services() {
     <section id="services" className="scroll-mt-24 py-6 md:py-8">
       <div className="shell">
         <div className="relative rounded-section bg-blue-100 px-5 py-10 sm:px-8 md:px-10 md:py-12 xl:px-12 xl:pb-16">
-          <div className="grid gap-8 lg:grid-cols-[12.5rem_minmax(0,1fr)] lg:gap-7 xl:grid-cols-[13.5rem_minmax(0,1fr)_8rem] xl:gap-8">
+          <div className="grid gap-8 lg:grid-cols-[13.5rem_minmax(0,1fr)] lg:gap-7 xl:grid-cols-[14.5rem_minmax(0,1fr)_8rem] xl:gap-8">
             {/* -------- Section title -------- */}
             <Reveal className="relative self-start xl:pt-6" y={18}>
-              <h2 className="marker -rotate-[2deg] text-[2.6rem] leading-[0.86] text-ink sm:text-[3.2rem] xl:text-[3.6rem]">
+              <h2 className="marker -rotate-[2deg] text-[2.9rem] leading-[0.84] text-ink sm:text-[3.4rem] xl:text-[3.9rem]">
                 What
                 <br />
                 We Do
               </h2>
-              <ScribbleUnderline className="ml-2 mt-3 h-4 w-36 -rotate-1 text-blue" delay={0.25} />
+              <ScribbleUnderline className="ml-2 mt-3 h-5 w-44 -rotate-1 text-blue" delay={0.25} width={3.6} />
               {/* Arrow running from the title across to the first card. */}
               <ArrowWobbleRight
                 className="ml-4 mt-4 hidden h-8 w-28 rotate-[10deg] text-ink lg:block"
@@ -56,12 +56,12 @@ export function Services() {
 
             {/* -------- Margin annotation -------- */}
             <Reveal
-              className="relative flex items-center gap-3 lg:col-span-2 lg:justify-center xl:col-span-1 xl:block xl:self-end xl:pb-8"
+              className="relative flex items-center gap-3 lg:col-span-2 lg:justify-center xl:col-span-1 xl:-ml-2 xl:block xl:self-end xl:pb-10"
               delay={0.3}
               y={16}
             >
               <ArrowBendLeft
-                className="h-12 w-16 shrink-0 rotate-180 text-ink xl:mb-1 xl:ml-1 xl:rotate-0"
+                className="h-12 w-16 shrink-0 rotate-180 text-ink xl:mb-0 xl:-ml-3 xl:h-14 xl:w-20 xl:rotate-0"
                 delay={0.5}
                 width={2.8}
               />

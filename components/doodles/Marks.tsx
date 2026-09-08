@@ -286,3 +286,65 @@ export function BrushBox({ className, delay = 0 }: { className?: string; delay?:
     </motion.svg>
   );
 }
+
+/**
+ * A single rising line drawn under the impact numbers, touching down at each
+ * one. It is the section's one growth idea: the figures stop being four
+ * separate stats and become a trend.
+ *
+ * The viewBox aspect is deliberately close to the rendered box so the dots and
+ * arrowhead barely distort when it stretches to the metrics row.
+ */
+function TrendPoints({ delay }: { delay: number }) {
+  const reduceMotion = useReducedMotion();
+  const points: Array<[number, number]> = [
+    [100, 75],
+    [300, 58],
+    [500, 33],
+    [700, 13],
+  ];
+
+  return (
+    <>
+      {points.map(([cx, cy], i) => (
+        <motion.circle
+          key={cx}
+          cx={cx}
+          cy={cy}
+          r="6"
+          fill="currentColor"
+          initial={reduceMotion ? undefined : { opacity: 0 }}
+          whileInView={reduceMotion ? undefined : { opacity: 1 }}
+          viewport={{ once: true, margin: '-10% 0px' }}
+          transition={{ duration: 0.25, delay: delay + 0.35 + i * 0.3 }}
+        />
+      ))}
+    </>
+  );
+}
+
+export function RisingTrend({ className, delay = 0, width = 2.8 }: MarkProps) {
+  return (
+    <Doodle viewBox="0 0 800 82" className={className} preserveAspectRatio="none">
+      <DrawnPath
+        d="M30 77C130 76 200 69 270 60C350 49 410 41 480 33C560 24 660 16 760 8"
+        width={width}
+        delay={delay}
+        duration={1.6}
+      />
+      {/* Ghost pass, slightly off-register. */}
+      <DrawnPath
+        className="opacity-30"
+        d="M34 81C132 80 204 73 272 64C352 53 412 45 482 37C562 28 662 20 758 12"
+        width={width - 1}
+        delay={delay + 0.15}
+        duration={1.6}
+      />
+      <DrawnPath d="M747 16L761 8L745 3" width={width} delay={delay + 1.3} duration={0.3} />
+      {/* Touch-down points sit under each metric column. Driven by the same
+          motion primitive as every other doodle so they honour reduced motion
+          and fire on scroll rather than page load. */}
+      <TrendPoints delay={delay} />
+    </Doodle>
+  );
+}

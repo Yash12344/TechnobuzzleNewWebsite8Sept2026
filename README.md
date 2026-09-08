@@ -83,6 +83,15 @@ components — roughly structured with a deliberate margin of irregularity:
   that starts and stops on its step rings, and the growth figure is circled.
 - Elements cross their own boundaries: the testimonials label sits over the
   band's top edge, and a blue shape bleeds off the left margin.
+- Impact has exactly one growth idea: the figures step upward left to right and
+  a single drawn line rises beneath them, touching down under each one. The
+  stagger and the line say the same thing rather than competing.
+
+The hero figure is drawn with a line-weight hierarchy — heavy silhouette,
+medium features, fine detail — which is most of what separates a character
+from a stock vector. Its pencil carries a black contour like everything else in
+the drawing; without one the blue body disappears into the blob and only the
+tip reads, turning it into an arrow.
 
 Two utilities exist for the display type: `BrushBox` (a painted block behind a
 highlighted word — filled and uneven, because a CSS rounded rectangle reads as
@@ -129,15 +138,19 @@ Not a shrunken desktop — each breakpoint is composed:
 | --- | --- | --- | --- |
 | Hero | headline first, figure below | stacked, full-width figure | overlapping spread |
 | Services | vertical cards | 2 columns | 4 staggered, angled cards |
-| Featured work | swipeable snap rail | 2 columns, uniform 4:3 | varied widths and proportions |
+| Featured work | swipeable snap rail | 2 columns, uniform 4:3 | varied widths, DDIS leads |
 | Impact | 2×2 metric grid | 4 across | 4 across, stepped baselines |
-| Process | vertical timeline, drawn down-arrows | horizontal | horizontal, one drawn trail |
+| Process | vertical timeline, drawn down-arrows | vertical timeline | horizontal, one drawn trail |
 | Testimonials | stacked quotes | 2 columns | 3 hung quotes + label |
 
 The asymmetry is desktop-only by design: offsets, rotations and varied aspect
 ratios are gated behind `xl`, so tablet and mobile fall back to clean uniform
 grids. A custom `xs` (360px) breakpoint governs where the compact nav CTA
 appears — below it the wordmark keeps the space instead.
+
+Four process steps across do not fit below `lg` without dropping the copy to
+three cramped lines, so tablet gets the same vertical timeline as mobile. The
+horizontal trail is an `lg`-and-up layout.
 
 Verified with no horizontal overflow at 320, 360, 390, 430, 640, 768, 834,
 1024, 1180, 1280, 1440, 1600 and 1920 px.

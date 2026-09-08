@@ -78,9 +78,24 @@ export function HeroPortrait({ className }: { className?: string }) {
             d="M259 178H305V244C305 257 294 266 282 266C270 266 259 257 259 244Z"
             fill="#FFFFFF"
             stroke="#0B0B0D"
-            strokeWidth="4"
+            strokeWidth="5"
             strokeLinejoin="round"
           />
+
+          {/* Shoulder highlight — suggests form without shading the flat fill */}
+          <path
+            d="M168 384C198 342 238 318 268 310"
+            stroke="#FFFFFF"
+            strokeOpacity="0.1"
+            strokeWidth="7"
+            strokeLinecap="round"
+            fill="none"
+          />
+
+          {/* Brand pin */}
+          <circle cx="356" cy="312" r="10" fill="#1155F5" />
+          <circle cx="356" cy="312" r="10" stroke="#FFFFFF" strokeOpacity="0.5" strokeWidth="1.6" fill="none" />
+          <circle cx="356" cy="312" r="3.2" fill="#FFFFFF" />
 
           {/* Collar */}
           <path
@@ -96,7 +111,7 @@ export function HeroPortrait({ className }: { className?: string }) {
             d="M218 150C218 112 244 92 280 92C316 92 342 112 342 150C342 190 320 218 280 218C240 218 218 190 218 150Z"
             fill="#FFFFFF"
             stroke="#0B0B0D"
-            strokeWidth="4"
+            strokeWidth="5"
           />
           {/* Ears */}
           <path
@@ -116,12 +131,32 @@ export function HeroPortrait({ className }: { className?: string }) {
             d="M212 156C204 134 208 112 218 100C222 84 236 76 248 78C258 66 276 62 288 68C302 60 320 66 326 78C340 78 352 90 352 104C362 114 362 138 356 158C350 134 338 118 326 114C308 124 272 128 246 118C230 112 218 132 212 156Z"
             fill="#0B0B0D"
           />
+          {/* Curl texture, so the hair isn't a flat silhouette */}
+          <g stroke="#FFFFFF" strokeOpacity="0.22" strokeWidth="3" strokeLinecap="round" fill="none">
+            <path d="M238 100C246 90 258 89 265 96" />
+            <path d="M288 88C297 81 308 83 314 90" />
+            <path d="M262 76C271 70 281 72 287 79" />
+          </g>
+
+          {/* Blue pencil tucked over the ear — the one detail that says this
+              is a maker, not a mascot. Built flat and rotated into place so the
+              body, ferrule and graphite tip stay in proportion. */}
+          {/* Contoured like everything else in the drawing — without the black
+              outline the blue body vanishes into the blob and only the tip
+              reads, which turns the pencil into an arrow. */}
+          <g transform="rotate(-52 350 168)" stroke="#0B0B0D" strokeWidth="2.6" strokeLinejoin="round">
+            <rect x="350" y="161" width="42" height="14" rx="2" fill="#1155F5" />
+            <rect x="392" y="161" width="6" height="14" fill="#CBDEFF" />
+            <path d="M398 161L410 168L398 175Z" fill="#0B0B0D" />
+            <path d="M356 168H386" stroke="#0B45D6" strokeWidth="1.6" strokeLinecap="round" />
+          </g>
+
           {/* Brows */}
-          <path d="M230 131C240 124 258 124 268 130" stroke="#0B0B0D" strokeWidth="4" strokeLinecap="round" />
-          <path d="M292 130C302 124 320 124 330 131" stroke="#0B0B0D" strokeWidth="4" strokeLinecap="round" />
+          <path d="M229 126C239 116 258 117 268 125" stroke="#0B0B0D" strokeWidth="3.5" strokeLinecap="round" />
+          <path d="M292 130C302 124 320 124 330 131" stroke="#0B0B0D" strokeWidth="3.5" strokeLinecap="round" />
           {/* Glasses */}
-          <rect x="228" y="141" width="46" height="36" rx="14" fill="#FFFFFF" stroke="#0B0B0D" strokeWidth="4" />
-          <rect x="288" y="141" width="46" height="36" rx="14" fill="#FFFFFF" stroke="#0B0B0D" strokeWidth="4" />
+          <rect x="228" y="141" width="46" height="36" rx="14" fill="#FFFFFF" stroke="#0B0B0D" strokeWidth="4.5" />
+          <rect x="288" y="141" width="46" height="36" rx="14" fill="#FFFFFF" stroke="#0B0B0D" strokeWidth="4.5" />
           <path d="M274 154C278 150 284 150 288 154" stroke="#0B0B0D" strokeWidth="4" strokeLinecap="round" />
           <path d="M228 152L214 157" stroke="#0B0B0D" strokeWidth="4" strokeLinecap="round" />
           <path d="M334 152L347 157" stroke="#0B0B0D" strokeWidth="4" strokeLinecap="round" />
@@ -129,14 +164,14 @@ export function HeroPortrait({ className }: { className?: string }) {
           <circle cx="257" cy="156" r="4.5" fill="#0B0B0D" />
           <circle cx="317" cy="156" r="4.5" fill="#0B0B0D" />
           {/* Nose + smile */}
-          <path d="M277 172C272 184 275 190 283 190" stroke="#0B0B0D" strokeWidth="3.5" strokeLinecap="round" />
+          <path d="M277 172C272 184 275 190 283 190" stroke="#0B0B0D" strokeWidth="3" strokeLinecap="round" />
           <path d="M256 198C268 211 296 211 308 197" stroke="#0B0B0D" strokeWidth="4" strokeLinecap="round" />
           {/* ---- Laptop ---------------------------------------------- */}
           <path
             d="M170 436H398C404 436 409 440 410.5 446L430 540C431.5 547.5 426 554 418.5 554H149.5C142 554 136.5 547.5 138 540L157.5 446C159 440 164 436 170 436Z"
             fill="#FFFFFF"
             stroke="#0B0B0D"
-            strokeWidth="4.5"
+            strokeWidth="5"
             strokeLinejoin="round"
           />
           {/* Logo mark embossed on the lid */}
@@ -153,7 +188,7 @@ export function HeroPortrait({ className }: { className?: string }) {
             d="M132 554H436C444 554 450.5 559.5 451.5 567L453 577C454 584.5 448.5 590 441 590H127C119.5 590 114 584.5 115 577L116.5 567C117.5 559.5 124 554 132 554Z"
             fill="#E9F1FF"
             stroke="#0B0B0D"
-            strokeWidth="4.5"
+            strokeWidth="5"
             strokeLinejoin="round"
           />
           <path d="M254 572H314" stroke="#0B0B0D" strokeWidth="4" strokeLinecap="round" />

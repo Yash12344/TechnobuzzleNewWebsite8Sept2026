@@ -173,7 +173,7 @@ export function Hero() {
                 className="doodle right-[48%] top-[2%] z-20 h-14 w-12 text-ink sm:right-[30%] sm:h-16 sm:w-14"
                 delay={1.35}
               />
-              <Ticks className="doodle right-[45%] top-[1%] z-20 h-8 w-6 text-blue sm:right-[27%]" delay={1.55} />
+              <Ticks className="doodle right-[27%] top-[1%] z-20 hidden h-8 w-6 text-blue sm:block" delay={1.55} />
 
               {/* Sticky note, pinned over the blob's shoulder */}
               <motion.div

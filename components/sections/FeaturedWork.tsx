@@ -17,10 +17,13 @@ import { ArrowCurveDownRight } from '@/components/doodles/Arrows';
  * the mobile snap rail stay clean.
  */
 const layout = [
-  { grow: 'xl:flex-[1.34_1_0%]', aspect: 'aspect-[4/3]', offset: '' },
-  { grow: 'xl:flex-[1_1_0%]', aspect: 'aspect-[4/3] xl:aspect-[3/4]', offset: 'xl:mt-10' },
-  { grow: 'xl:flex-[1.16_1_0%]', aspect: 'aspect-[4/3]', offset: 'xl:mt-3' },
-  { grow: 'xl:flex-[0.96_1_0%]', aspect: 'aspect-[4/3] xl:aspect-[3/4]', offset: 'xl:mt-14' },
+  // Widths keep every client name on one line while DDIS stays clearly the
+  // lead. Offsets form a rhythm rather than a slope — a steady left-to-right
+  // descent would read as decline, which is the opposite of the point.
+  { grow: 'xl:flex-[1.45_1_0%]', aspect: 'aspect-[4/3]', offset: '', num: 'text-blue' },
+  { grow: 'xl:flex-[0.95_1_0%]', aspect: 'aspect-[4/3] xl:aspect-[3/4]', offset: 'xl:mt-11', num: 'text-white/55' },
+  { grow: 'xl:flex-[1.1_1_0%]', aspect: 'aspect-[4/3]', offset: 'xl:mt-3', num: 'text-ink/45' },
+  { grow: 'xl:flex-[1.1_1_0%]', aspect: 'aspect-[4/3] xl:aspect-[3/4]', offset: 'xl:mt-8', num: 'text-ink/45' },
 ];
 
 export function FeaturedWork() {
@@ -85,6 +88,9 @@ export function FeaturedWork() {
                     project={project}
                     priority={i === 0}
                     aspectClassName={layout[i].aspect}
+                    index={i + 1}
+                    indexClassName={layout[i].num}
+                    lead={i === 0}
                   />
                 </Reveal>
               ))}
