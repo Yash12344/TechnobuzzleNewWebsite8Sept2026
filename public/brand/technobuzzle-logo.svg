@@ -1,0 +1,10 @@
+<!-- Placeholder lockup. Replace this file with the official Technobuzzle logo,
+     then point components/ui/Logo.tsx at it (see the notice in that file). -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 56" fill="none">
+  <circle cx="28" cy="28" r="26" fill="#FFFFFF" stroke="#1155F5" stroke-width="3"/>
+  <circle cx="28" cy="28" r="21" fill="#1155F5" fill-opacity="0.08"/>
+  <path d="M22 14V42M22 14H32.5C36.4 14 39.5 17 39.5 20.8C39.5 24.6 36.4 27.6 32.5 27.6H22M22 27.6H34C37.9 27.6 41 30.6 41 34.4C41 38.2 37.9 41.2 34 41.2H22" stroke="#1155F5" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M17.5 17.5L13 25.5H16.5L14.5 33" stroke="#1155F5" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="66" y="28" font-family="'Arial Black','Helvetica Neue',Helvetica,Arial,sans-serif" font-weight="900" font-size="19" letter-spacing="-0.2" fill="#0B0B0D">TECHNOBUZZLE</text>
+  <text x="67" y="41" font-family="Helvetica,Arial,sans-serif" font-weight="700" font-size="7.2" letter-spacing="2.6" fill="#5A6070">BRAND MANAGEMENT AGENCY</text>
+</svg>

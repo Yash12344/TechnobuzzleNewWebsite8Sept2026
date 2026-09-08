@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#E9F1FF"/>
+  <circle cx="400" cy="300" r="230" fill="#CBDEFF"/>
+  <!-- leaves behind -->
+  <path d="M150 470c-40-90 10-180 96-206-10 92-40 158-96 206Z" fill="#1155F5" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M650 470c40-90-10-180-96-206 10 92 40 158 96 206Z" fill="#1155F5" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <!-- bottle left -->
+  <path d="M244 224h58v34c0 10 20 20 20 44v208c0 12-9 20-20 20h-58c-11 0-20-8-20-20V302c0-24 20-34 20-44z" fill="#FFFFFF" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="238" y="196" width="70" height="34" rx="8" fill="#0B45D6" stroke="#0B0B0D" stroke-width="6"/>
+  <rect x="228" y="360" width="94" height="110" fill="#1155F5"/>
+  <path d="M252 398h46M252 424h46" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <!-- bottle center (tall) -->
+  <path d="M362 168h76v40c0 12 26 24 26 52v250c0 14-11 24-24 24h-80c-13 0-24-10-24-24V260c0-28 26-40 26-52z" fill="#FFFFFF" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="354" y="134" width="92" height="42" rx="10" fill="#0B45D6" stroke="#0B0B0D" stroke-width="6"/>
+  <rect x="340" y="332" width="120" height="140" fill="#1155F5"/>
+  <path d="M370 372h60M370 402h60M370 432h40" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"/>
+  <!-- bottle right -->
+  <path d="M498 232h58v32c0 10 20 20 20 44v206c0 12-9 20-20 20h-58c-11 0-20-8-20-20V308c0-24 20-34 20-44z" fill="#FFFFFF" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="492" y="204" width="70" height="34" rx="8" fill="#0B45D6" stroke="#0B0B0D" stroke-width="6"/>
+  <rect x="482" y="366" width="94" height="106" fill="#1155F5"/>
+  <path d="M506 402h46M506 428h46" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M100 534h600" stroke="#0B0B0D" stroke-width="6" stroke-linecap="round"/>
+</svg>

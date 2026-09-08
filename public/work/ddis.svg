@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#E9F1FF"/>
+  <circle cx="672" cy="118" r="46" fill="#CBDEFF"/>
+  <path d="M96 148h74M84 168h50" stroke="#CBDEFF" stroke-width="9" stroke-linecap="round"/>
+  <rect y="466" width="800" height="134" fill="#CBDEFF"/>
+  <!-- wings -->
+  <rect x="86" y="252" width="628" height="216" fill="#FFFFFF" stroke="#0B0B0D" stroke-width="6"/>
+  <!-- tower -->
+  <rect x="326" y="164" width="148" height="304" fill="#FFFFFF" stroke="#0B0B0D" stroke-width="6"/>
+  <path d="M306 164L400 98L494 164Z" fill="#1155F5" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M400 98V56" stroke="#0B0B0D" stroke-width="6" stroke-linecap="round"/>
+  <path d="M402 58h46l-13 15 13 15h-46z" fill="#1155F5" stroke="#0B0B0D" stroke-width="5" stroke-linejoin="round"/>
+  <!-- tower clock -->
+  <circle cx="400" cy="216" r="26" fill="#1155F5" stroke="#0B0B0D" stroke-width="5"/>
+  <path d="M400 202v14l10 7" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- windows: left wing -->
+  <g fill="#1155F5">
+    <rect x="122" y="288" width="46" height="52" rx="6"/><rect x="188" y="288" width="46" height="52" rx="6"/><rect x="254" y="288" width="46" height="52" rx="6"/>
+    <rect x="122" y="366" width="46" height="52" rx="6"/><rect x="188" y="366" width="46" height="52" rx="6"/><rect x="254" y="366" width="46" height="52" rx="6"/>
+    <rect x="500" y="288" width="46" height="52" rx="6"/><rect x="566" y="288" width="46" height="52" rx="6"/><rect x="632" y="288" width="46" height="52" rx="6"/>
+    <rect x="500" y="366" width="46" height="52" rx="6"/><rect x="566" y="366" width="46" height="52" rx="6"/><rect x="632" y="366" width="46" height="52" rx="6"/>
+  </g>
+  <!-- entrance -->
+  <path d="M366 468V376c0-19 15-34 34-34s34 15 34 34v92z" fill="#0B45D6" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M400 342v126" stroke="#FFFFFF" stroke-width="5"/>
+  <!-- steps -->
+  <path d="M336 468h128M320 490h160" stroke="#0B0B0D" stroke-width="6" stroke-linecap="round"/>
+  <!-- trees -->
+  <path d="M64 466V416" stroke="#0B0B0D" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="64" cy="392" r="42" fill="#1155F5" stroke="#0B0B0D" stroke-width="6"/>
+  <path d="M742 466V424" stroke="#0B0B0D" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="742" cy="402" r="36" fill="#1155F5" stroke="#0B0B0D" stroke-width="6"/>
+  <path d="M0 466h800" stroke="#0B0B0D" stroke-width="6"/>
+</svg>

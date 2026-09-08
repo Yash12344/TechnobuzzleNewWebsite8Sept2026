@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#0B45D6"/>
+  <circle cx="640" cy="140" r="120" fill="#1155F5"/>
+  <circle cx="150" cy="470" r="150" fill="#1155F5"/>
+  <!-- figure -->
+  <path d="M262 600c0-96 62-160 138-160s138 64 138 160z" fill="#0B0B0D"/>
+  <circle cx="400" cy="330" r="86" fill="#FFFFFF" stroke="#0B0B0D" stroke-width="7"/>
+  <path d="M318 320c-6-64 30-104 82-104s88 40 82 104c-10-26-26-40-40-44-24 14-66 16-92 4-14-6-26 14-32 40Z" fill="#0B0B0D"/>
+  <circle cx="374" cy="336" r="7" fill="#0B0B0D"/>
+  <circle cx="428" cy="336" r="7" fill="#0B0B0D"/>
+  <path d="M372 372c14 16 42 16 56 0" stroke="#0B0B0D" stroke-width="7" stroke-linecap="round"/>
+  <!-- phone -->
+  <rect x="486" y="322" width="150" height="248" rx="24" fill="#FFFFFF" stroke="#0B0B0D" stroke-width="7"/>
+  <rect x="506" y="348" width="110" height="150" rx="10" fill="#1155F5"/>
+  <path d="M545 396l40 26-40 26z" fill="#FFFFFF"/>
+  <path d="M510 522h72M510 544h50" stroke="#0B0B0D" stroke-width="8" stroke-linecap="round"/>
+  <!-- floating cards -->
+  <rect x="140" y="180" width="176" height="112" rx="16" fill="#FFFFFF" stroke="#0B0B0D" stroke-width="7" transform="rotate(-7 228 236)"/>
+  <path d="M170 218h116M168 246h74" stroke="#1155F5" stroke-width="11" stroke-linecap="round" transform="rotate(-7 228 236)"/>
+  <rect x="586" y="150" width="150" height="96" rx="16" fill="#FFFFFF" stroke="#0B0B0D" stroke-width="7" transform="rotate(6 661 198)"/>
+  <path d="M612 182h98M610 210h60" stroke="#1155F5" stroke-width="11" stroke-linecap="round" transform="rotate(6 661 198)"/>
+</svg>

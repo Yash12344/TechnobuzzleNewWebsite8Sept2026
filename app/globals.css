@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ *
+ * Base
+ * ------------------------------------------------------------------ */
+
+@layer base {
+  :root {
+    --shell-gutter: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --shell-gutter: 2rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    :root {
+      --shell-gutter: 2.75rem;
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Nav is sticky — keep anchor targets clear of it. */
+    scroll-padding-top: 6rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    /* Nothing in this layout should ever scroll sideways: doodles are
+       positioned outside the grid on purpose and are clipped, not scrolled. */
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-blue text-white;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-blue ring-offset-2 ring-offset-white rounded-sm;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Components
+ * ------------------------------------------------------------------ */
+
+@layer components {
+  /* The page grid. Everything sits inside this; doodles break out of it. */
+  .shell {
+    width: 100%;
+    max-width: theme('maxWidth.shell');
+    margin-inline: auto;
+    padding-inline: var(--shell-gutter);
+  }
+
+  /* Marker display type. Permanent Marker sits high in its em box, so the
+     optical baseline needs nudging whenever it's mixed with sans. */
+  .marker {
+    @apply font-marker uppercase;
+    letter-spacing: 0.005em;
+  }
+
+  /* Handwritten margin notes — always slightly off-axis. */
+  .annotation {
+    @apply font-hand font-bold leading-[1.05] text-ink;
+  }
+
+  .annotation-blue {
+    @apply annotation text-blue;
+  }
+
+  .eyebrow {
+    @apply font-display uppercase tracking-[0.14em] text-[0.6875rem] md:text-xs;
+  }
+
+  /* Hand-drawn feel: a slightly irregular black outline used on cards
+     that need to read as "drawn onto the page" rather than "rendered". */
+  .ink-edge {
+    @apply border-[1.5px] border-ink/12;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Horizontal snap rail used for work cards / testimonials on mobile. */
+  .snap-rail {
+    @apply flex gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory;
+    scroll-padding-inline: var(--shell-gutter);
+  }
+
+  .snap-rail > * {
+    @apply snap-start shrink-0;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Utilities
+ * ------------------------------------------------------------------ */
+
+@layer utilities {
+  /* Hand-drawn highlight behind a word (the blue marker swipe). */
+  .highlight-blue {
+    position: relative;
+    display: inline-block;
+    isolation: isolate;
+    padding-inline: 0.18em;
+  }
+
+  .highlight-blue::before {
+    content: '';
+    position: absolute;
+    inset: 0.1em -0.05em 0.02em;
+    z-index: -1;
+    background: theme('colors.blue.DEFAULT');
+    /* Uneven corners so the swipe reads as a brush stroke, not a rectangle. */
+    border-radius: 0.6em 0.35em 0.7em 0.4em / 0.55em 0.7em 0.4em 0.6em;
+    transform: rotate(-0.6deg);
+  }
+
+  /* Paper-note surface used for the pinned annotations. */
+  .note-paper {
+    background: theme('colors.blue.200');
+    box-shadow: 0 10px 24px -14px rgba(11, 11, 13, 0.45);
+  }
+
+  .tilt-1 { transform: rotate(-2.5deg); }
+  .tilt-2 { transform: rotate(1.8deg); }
+  .tilt-3 { transform: rotate(-1.2deg); }
+  .tilt-4 { transform: rotate(3deg); }
+
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Doodles are decorative — never let them intercept pointer events. */
+  .doodle {
+    @apply pointer-events-none select-none absolute;
+  }
+}
+
+/* ------------------------------------------------------------------ *
+ * Motion preferences
+ * ------------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

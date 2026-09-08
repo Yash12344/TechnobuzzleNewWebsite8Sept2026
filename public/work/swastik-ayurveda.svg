@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#F4F8FF"/>
+  <path d="M0 400c130-46 250-46 400 0s270 46 400 0v200H0z" fill="#CBDEFF"/>
+  <!-- pouch left -->
+  <path d="M158 232h178l-16 288c-1 16-14 28-30 28H204c-16 0-29-12-30-28z" fill="#FFFFFF" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M150 200h194l-8 34H158z" fill="#0B45D6" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M172 320h150l-8 96H180z" fill="#1155F5"/>
+  <path d="M200 460h96" stroke="#0B0B0D" stroke-width="8" stroke-linecap="round"/>
+  <!-- pouch center -->
+  <path d="M312 172h198l-18 336c-1 18-16 32-34 32H364c-18 0-33-14-34-32z" fill="#FFFFFF" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M304 136h214l-8 38H312z" fill="#0B45D6" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M330 272h164l-10 116H340z" fill="#1155F5"/>
+  <!-- leaf mark on centre pouch -->
+  <path d="M412 296c-30 12-42 42-30 66 26 4 48-14 52-40 2-14-8-28-22-26Z" fill="#FFFFFF"/>
+  <path d="M382 362c14-22 26-38 48-52" stroke="#0B45D6" stroke-width="7" stroke-linecap="round"/>
+  <path d="M356 432h112M370 464h84" stroke="#0B0B0D" stroke-width="8" stroke-linecap="round"/>
+  <!-- pouch right -->
+  <path d="M488 244h164l-15 268c-1 16-14 28-30 28H533c-16 0-29-12-30-28z" fill="#FFFFFF" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M480 212h180l-8 32H488z" fill="#0B45D6" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M502 328h138l-8 92H510z" fill="#1155F5"/>
+  <path d="M528 466h84" stroke="#0B0B0D" stroke-width="8" stroke-linecap="round"/>
+  <!-- leaves -->
+  <path d="M690 476c34-58 22-128-26-158-24 68-16 122 26 158Z" fill="#1155F5" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M104 476c-34-58-22-128 26-158 24 68 16 122-26 158Z" fill="#1155F5" stroke="#0B0B0D" stroke-width="6" stroke-linejoin="round"/>
+</svg>
